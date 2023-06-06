@@ -1,0 +1,17 @@
+<app-header [name]="'ActionSheet'"></app-header>
+
+<ion-content [fullscreen]="true">
+
+
+<ion-button (click)="presentActionSheet()" >Abrir con Controller</ion-button>
+
+<br><br>
+<ion-button (click)="setOpen(true)" class="btn">Abrir</ion-button> 
+<ion-action-sheet
+  [isOpen]="isActionSheetOpen"
+  header="Selecciona una Acción"
+  [buttons]="actionSheetButtons"
+  (didDismiss)="setOpen(false)"
+></ion-action-sheet>
+
+</ion-content>

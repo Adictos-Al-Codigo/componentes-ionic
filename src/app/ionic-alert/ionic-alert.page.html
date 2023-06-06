@@ -1,0 +1,15 @@
+<app-header [name]="'Ion-Alert'"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button id="present-alert">Sin Controllador</ion-button>
+  <ion-alert
+  trigger="present-alert"
+  header="Alert"
+  subHeader="Important message"
+  message="This is an alert!"
+  [buttons]="alertButtons"
+  ></ion-alert>
+
+  <br><br><br>
+  <ion-button (click)="presentAlert()">Con Controllador</ion-button>
+</ion-content>
